@@ -7,6 +7,7 @@ namespace ConsoleAppNewStart
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("I love to code");
         }
     }
 }
