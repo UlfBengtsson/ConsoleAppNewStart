@@ -18,7 +18,12 @@ namespace ConsoleAppNewStart
             while (keepLooping)
             {
                 Console.Clear();
-                Console.WriteLine("---- Menu ----\n1. Age limited Store´s\n9. Exit\n");
+                Console.WriteLine("---- Menu ----"
+                                  +"\n1. Age limited Store´s"
+                                  +"\n2. Count down"
+                                  +"\n3. Same but diffrent"
+                                  +"\n9. Exit\n"
+                                  );
 
                 int selection = AskUserForNumber("your selection");
 
@@ -26,6 +31,14 @@ namespace ConsoleAppNewStart
                 {
                     case 1:
                         AgeLimitStors();
+                        break;
+
+                    case 2:
+                        CountDown();
+                        break;
+
+                    case 3:
+                        DiffrentButSame();
                         break;
 
                     case 9:
@@ -42,6 +55,31 @@ namespace ConsoleAppNewStart
 
 
         }//end of Main method
+
+        static void DiffrentButSame()
+        {
+            double number1 = 1;
+            double number2 = 3;
+            double result = number1 / number2;
+
+            Console.WriteLine(number1 + " / " + number2 + " = " + result);
+
+            Console.WriteLine("{0} / {1} = {2}" , number1, number2, result);
+
+            Console.WriteLine($"{number1} / {number2} = {result}");
+
+            Console.WriteLine($"{number1} / {number2} = {number1 / number2}");
+        }
+
+        static void CountDown()
+        {
+            int startNumber = AskUserForNumber("number to count down from");
+
+            for (int i = startNumber; i > 0; i--)
+            {
+                Console.WriteLine("Number: " + i);
+            }
+        }
 
         static void AgeLimitStors()
         {
@@ -92,7 +130,7 @@ namespace ConsoleAppNewStart
         static void PressToContinue()
         {
             Console.WriteLine("Press any key to continue.");
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
 
     }//end of program class
