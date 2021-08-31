@@ -167,5 +167,30 @@ namespace ConsoleAppNewStart
             Console.ReadKey(true);
         }
 
+        static void MoreAndMore()
+        {
+            Console.WriteLine("Enter line by line of text, when you are done just enter a empty line to stop");
+
+            bool moreLines = true;
+            string text = "";
+            
+            do
+            {
+                string input = Console.ReadLine();
+
+                if (input.Length > 0)
+                {
+                    text += input + "\n";
+                }
+                else
+                {
+                    moreLines = false;
+                }
+            } while (moreLines);
+
+            Console.WriteLine("Text summery: " + text);
+        }
+
+
     }//end of program class
 }//end of namespace
