@@ -22,6 +22,8 @@ namespace ConsoleAppNewStart
                                   +"\n1. Age limited Store´s"
                                   +"\n2. Count down"
                                   +"\n3. Same but diffrent"
+                                  +"\n4. Date Time"
+                                  +"\n4. Plus operator and friends"
                                   +"\n9. Exit\n"
                                   );
 
@@ -41,6 +43,14 @@ namespace ConsoleAppNewStart
                         DiffrentButSame();
                         break;
 
+                    case 4:
+                        DateTimePrinting();
+                        break;
+
+                    case 5:
+                        PlusOperatorModes();
+                        break;
+
                     case 9:
                         keepLooping = false;
                         Console.WriteLine("Thanks for youring this program.");
@@ -55,6 +65,30 @@ namespace ConsoleAppNewStart
 
 
         }//end of Main method
+
+        static void PlusOperatorModes()
+        {
+            string putTogether = "it " + "works";
+            Console.WriteLine(putTogether);
+            
+            double result = 1.2 + 3;
+            Console.WriteLine(result);
+
+            char startSymbol = 'g';
+            Console.WriteLine(1 + startSymbol);
+
+            Console.WriteLine(((short)startSymbol));
+        }
+
+        static void DateTimePrinting()
+        {
+            DateTime today = DateTime.Now;
+
+            Console.WriteLine(today);
+            Console.WriteLine(today.Date);
+            Console.WriteLine(today.Date.ToLongDateString());
+            Console.WriteLine(today.Date.ToShortDateString());
+        }
 
         static void DiffrentButSame()
         {
